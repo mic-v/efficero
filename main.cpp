@@ -1,18 +1,17 @@
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
+
 
 int main()
 {
         //init everything within sdl2
-        SDL_Init( SDL_INIT_EVERYTHING );
+        SDL_Init( SDL_INIT_VIDEO );
         
         //create window
         SDL_Window* window = SDL_CreateWindow(
         "Title",                //title 
-        300,                    //x position
-        300,                    //y position
         1280,                   //width
         720,                    //height
-        SDL_WINDOW_SHOWN);      //flags
+        SDL_WINDOW_OPENGL);      //flags
 
         if(window == nullptr)
         {
